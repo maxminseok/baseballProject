@@ -39,9 +39,9 @@ class checkThree { // 3글자인지 체크하는 클래스
     }
 }
 
-class checkZero { // 숫자에 0이 있는지 체크하는 클래스
+class checkZero { // 첫번째 자리에 0이 있는지 체크하는 클래스
     func check(input: [String]) -> Bool {
-        return input.contains("0") // 0이 있으면 true 반환, 없으면 false 반환
+        return input.first == "0" //첫번째 자리에 0이 있으면 true 반환, 없으면 false 반환
     }
 }
 
@@ -78,7 +78,7 @@ class checkCorrectInput { // 입력이 제대로 됐는지 확인하는 클래�
         self.CheckThree = checkThree()
         self.ConvertNumber = convertNumber()
     }
-    func check(input: String) -> Bool { // 3글자이면서, 0이 없고, 중복도 없고, 숫자만 입력되었을때 true, 아니면 false
+    func check(input: String) -> Bool { // 3글자이면서, 첫번째 자리가 0이 아니고, 중복도 없고, 숫자만 입력되었을때 true, 아니면 false 반환
         let arr = ConvertNumber.convertArray(input: input)
         return CheckNumber.check(input: input) || CheckZero.check(input: arr) || CheckDuplication.check(input: arr) || CheckThree.check(input: input)
     }
@@ -92,7 +92,6 @@ class checkCorrectInput { // 입력이 제대로 됐는지 확인하는 클래�
         return inputNumber
     }
 }
-
 
 /*                  출력 구현 부                 */
 
@@ -134,46 +133,3 @@ while checkStrikeCount != 3 { // 스트라이크가 3개가 아니면 계속 반
     checkStrikeCount = CheckStrike.check(answerArray: answerArray, inputArray: inputArray) // 다시 스트라이크 체크
 }
 print("정답입니다!")
-
-/*
-let answer = 628 // 정답
-var answerArray: [String] = [] // 문자로 변환해 하나씩 저장할 예정
-
-for char in String(answer) { // 문자열로 변환해 한글자씩 배열에 저장
-    answerArray.append(String(char))
-}
-
-print("< 게임을 시작합니다 >")
-print("숫자를 입력하세요")
-var inputNumber = readLine()!
-
-while Int(inputNumber) != answer { // 입력이 정답이랑 같은 값일때까지 반복
-    var strike = 0
-    var ball = 0
-    var inputArray: [String] = [] // 입력을 한글자씩 배열에 저장할 예정
-    
-    if inputNumber.count == 3 && Int(inputNumber) != nil { // 입력이 3개이고 숫자인지 확인
-        for char in inputNumber { // 입력한 숫자 한글자씩 배열에 저장
-            inputArray.append(String(char))
-        }
-        // 정답 배열과 입력 배열이 같은지 확인
-        for i in 0..<answerArray.count {
-            if inputArray[i] == answerArray[i] { strike += 1 } // 스트라이크 카운트
-        }
-        ball = (answerArray.filter { inputArray.contains($0) }).count - strike // 교집합의 원소 수 센 다음 스트라이크만큼 뺀 수로 볼 카운트
-        print("\(strike)스트라이크 \(ball)볼")
-    }
-    else { // 입력이 3자리가 아니거나 숫자가 아닐 경우
-        if inputNumber.count != 3 { // 중에 세 자리가 아닌 경우
-            print("세자리 숫자를 입력하세요.")
-        } else { // 혹은 숫자가 아닌 글자가 포함된 경우
-            print("숫자만 입력하세요")
-        }
-    }
-    
-    print()
-    print("숫자를 입력하세요")
-    inputNumber = readLine()!
-}
-print("정답입니다!")
-*/
