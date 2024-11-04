@@ -102,10 +102,8 @@ else {
             
             var answer = makeAnswer().randomAnswer() // 정답 숫자
             let convert = convertNumber() // 배열로 변환할 인스턴스
-            let CheckNumber = checkNumber() // 숫자인지 체크할 인스턴스
             let CheckZero = checkZero() // 0 있는지 체크할 인스턴스
             let CheckDup = checkDuplication() // 중복 체크할 인스턴스
-            let CheckThree = checkThree() // 3글자인지 체크할 인스턴스
             let CheckStrike = checkStrike() // 스트라이크를 체크할 인스턴스
             let CheckCorrectInput = checkCorrectInput() // 입력이 맞게 되었는지 확인할 인스턴스
             
