@@ -140,20 +140,22 @@ else {
             print("1. 게임 재시작하기  2. 게임 기록 보기  3. 종료하기")
             gameSelect = readLine()!
         }
-        if gameSelect == "2" && !gameCount.isEmpty { // 기록 출력, 게임 횟수 0이 아닌지도 확인
-                for i in 1...gameCount.count {
-                    print("\(i)번째 게임 : 시도 횟수 - \(gameCount[i-1])") // 배열에 저장된 시도 횟수 출력
-                }
-                print("\n원하시는 번호를 입력해주세요")
-                print("1. 게임 재시작하기  2. 게임 기록 보기  3. 종료하기")
-                gameSelect = readLine()!
-        } else {
+        if gameSelect == "2" && !gameCount.isEmpty { // 기록 출력, 게임 기록이 있으면서 2가 눌렸을 때 동작
+            for i in 1...gameCount.count {
+                print("\(i)번째 게임 : 시도 횟수 - \(gameCount[i-1])") // 배열에 저장된 시도 횟수 출력
+            }
+            print("\n원하시는 번호를 입력해주세요")
+            print("1. 게임 재시작하기  2. 게임 기록 보기  3. 종료하기")
+            gameSelect = readLine()!
+        } else if gameSelect == "2" && gameCount.isEmpty { // 2번 눌렀는데 게임 기록이 없을때 동작
             print("아직 게임 기록이 없습니다")
             print("1. 게임 재시작하기  또는  3. 종료하기 를 입력해주세요")
             gameSelect = readLine()!
-            
+        } else if gameSelect != "1" && gameSelect != "2" && gameSelect != "3" { // 게임 기록 없을 때 1,2,3 이외의 입력이 들어올 때 동작
+            print ("1~3 사이의 숫자를 입력해주세요")
+            gameSelect = readLine()!
         }
-        }
-    print("숫자 야구 게임을 종료합니다")
     }
+    print("숫자 야구 게임을 종료합니다")
+}
 
