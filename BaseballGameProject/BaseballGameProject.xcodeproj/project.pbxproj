@@ -23,9 +23,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		23CD71222CDA027000BB2FCB /* Checks */ = {
+		23CD71472CDA053300BB2FCB /* Checks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Checks;
+			sourceTree = "<group>";
+		};
+		23CD714E2CDA056300BB2FCB /* GameLogic */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GameLogic;
+			sourceTree = "<group>";
+		};
+		23CD714F2CDA057F00BB2FCB /* ConvertNumber */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ConvertNumber;
 			sourceTree = "<group>";
 		};
 		23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */ = {
@@ -49,7 +59,9 @@
 		23CF85E32CD86C3D00A4E3C6 = {
 			isa = PBXGroup;
 			children = (
-				23CD71222CDA027000BB2FCB /* Checks */,
+				23CD714F2CDA057F00BB2FCB /* ConvertNumber */,
+				23CD714E2CDA056300BB2FCB /* GameLogic */,
+				23CD71472CDA053300BB2FCB /* Checks */,
 				23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */,
 				23CF85ED2CD86C3D00A4E3C6 /* Products */,
 			);
@@ -79,7 +91,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				23CD71222CDA027000BB2FCB /* Checks */,
+				23CD71472CDA053300BB2FCB /* Checks */,
+				23CD714E2CDA056300BB2FCB /* GameLogic */,
+				23CD714F2CDA057F00BB2FCB /* ConvertNumber */,
 				23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */,
 			);
 			name = BaseballGameProject;
