@@ -25,8 +25,6 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1,2일 경우 아래 코
 
         let answer = makeAnswer().makeAnswerArray() // 정답 생성
         let convert = convertNumber() // 배열로 변환할 인스턴스
-//        let CheckZero = checkZero() // 0 있는지 체크할 인스턴스
-//        let CheckDup = checkDuplication() // 중복 체크할 인스턴스
         let StrikeAndBall = strikeAndBall() // 스트라이크를 체크할 인스턴스
         let CheckCorrectInput = checkCorrectInput() // 입력이 맞게 되었는지 확인할 인스턴스
         
