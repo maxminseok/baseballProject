@@ -38,9 +38,9 @@
 			path = ConvertNumber;
 			sourceTree = "<group>";
 		};
-		23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */ = {
+		23CF85EE2CD86C3D00A4E3C6 /* Main */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BaseballGameProject;
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,7 +62,7 @@
 				23CD714F2CDA057F00BB2FCB /* ConvertNumber */,
 				23CD714E2CDA056300BB2FCB /* GameLogic */,
 				23CD71472CDA053300BB2FCB /* Checks */,
-				23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */,
+				23CF85EE2CD86C3D00A4E3C6 /* Main */,
 				23CF85ED2CD86C3D00A4E3C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 				23CD71472CDA053300BB2FCB /* Checks */,
 				23CD714E2CDA056300BB2FCB /* GameLogic */,
 				23CD714F2CDA057F00BB2FCB /* ConvertNumber */,
-				23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */,
+				23CF85EE2CD86C3D00A4E3C6 /* Main */,
 			);
 			name = BaseballGameProject;
 			packageProductDependencies = (
