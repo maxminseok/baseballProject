@@ -29,7 +29,8 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1,2일 경우 아래 코
         let CheckCorrectInput = checkCorrectInput() // 입력이 맞게 되었는지 확인할 인스턴스
         
         var inputNumber = readLine()! // 숫자 입력 받기
-        while CheckCorrectInput.check(input: inputNumber) { // 입력에 이상 없는지 체크(3글자인지, 첫글자가 0 인지, 중복 있는지, 숫자 외 문자가 있는지)
+        
+        while !CheckCorrectInput.check(input: inputNumber) { // 입력에 이상 없는지 체크(3글자인지, 첫글자가 0 인지, 중복 있는지, 숫자 외 문자가 있는지)
             inputNumber = CheckCorrectInput.repeatInput() // 이상 있으면 없을 때까지 재입력
         }
         
@@ -40,7 +41,7 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1,2일 경우 아래 코
         while strikeAndBallCount.strike != 3 { // 스트라이크가 3개가 아니면 계속 반복
             print("\n숫자를 입력하세요")
             inputNumber = readLine()! // 숫자 재입력
-            while CheckCorrectInput.check(input: inputNumber) { // 다시 입력한 숫자에 문제 없는지 체크
+            while !CheckCorrectInput.check(input: inputNumber) { // 다시 입력한 숫자에 문제 없는지 체크
                 inputNumber = CheckCorrectInput.repeatInput() // 다시 입력한 숫자가 문제 없을 때까지 재입력
             }
             inputArray = convert.convertArray(input: inputNumber) // 재비교를 위해 다시 배열에 저장

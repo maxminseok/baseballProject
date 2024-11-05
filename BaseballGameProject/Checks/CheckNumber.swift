@@ -9,6 +9,6 @@ import Foundation
 
 class checkNumber { // 입력이 숫자인지 체크할 클래스
     func check(input: String) -> Bool {
-        return Int(input) == nil // Int로 변환 가능하면 false, 변환 불가능하면(=문자가 있으면) true 반환
+        return Int(input) != nil // Int로 변환 가능하면 true, 변환 불가능하면(=문자가 있으면) false 반환
     }
 }

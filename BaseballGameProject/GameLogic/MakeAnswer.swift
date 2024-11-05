@@ -20,7 +20,7 @@ class makeAnswer { // 정답으로 할 3자리 랜덤 난수 생성 클래스
         var answer = randomAnswer() // 난수 생성
         var answerArray = convert.convertArray(input: answer) // 정답 숫자를 문자로 변환 후 배열에 저장
         
-        while CheckZero.check(input: answerArray) || CheckDup.check(input: answerArray) { // 정답 글자의 중복 여부와 첫글자 0 유무 확인, 둘 중 하나라도 있으면 정답 재설정
+        while !CheckZero.check(input: answerArray) || !CheckDup.check(input: answerArray) { // 정답 글자의 중복 여부와 첫글자 0 유무 확인, 둘 중 하나라도 있으면 정답 재설정
             answer = randomAnswer()
             answerArray = convert.convertArray(input: answer)
         }
