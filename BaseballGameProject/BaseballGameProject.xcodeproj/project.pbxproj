@@ -23,6 +23,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		23CD71222CDA027000BB2FCB /* Checks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Checks;
+			sourceTree = "<group>";
+		};
 		23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BaseballGameProject;
@@ -44,6 +49,7 @@
 		23CF85E32CD86C3D00A4E3C6 = {
 			isa = PBXGroup;
 			children = (
+				23CD71222CDA027000BB2FCB /* Checks */,
 				23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */,
 				23CF85ED2CD86C3D00A4E3C6 /* Products */,
 			);
@@ -73,6 +79,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				23CD71222CDA027000BB2FCB /* Checks */,
 				23CF85EE2CD86C3D00A4E3C6 /* BaseballGameProject */,
 			);
 			name = BaseballGameProject;
