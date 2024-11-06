@@ -18,7 +18,7 @@ while gameSelect != "1" && gameSelect != "2" && gameSelect != "3" { // 입력이
 }
 
 while gameSelect != "3" { // 3일 경우 게임 종료, 1,2일 경우 아래 코드 동작
-    var tryCount = 0 // 시도 횟수 카운트
+    var tryCount = 1 // 시도 횟수 카운트
     if gameSelect == "1" { // 1일 경우 게임 시작
         print("게임을 시작합니다")
         print("숫자를 입력하세요")
