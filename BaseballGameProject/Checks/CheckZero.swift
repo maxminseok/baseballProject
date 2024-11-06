@@ -9,6 +9,6 @@ import Foundation
 
 class checkZero { // 첫번째 자리에 0이 있는지 체크하는 클래스,
     func check(input: [String]) -> Bool {
-        return !(input.first == "0") //첫번째 자리에 0이 없어야 하므로 있으면 false 반환, 없으면 true 반환
+        return input.first != "0" //첫번째 자리에 0이 없어야 하므로 있으면 false 반환, 없으면 true 반환
     }
 }
