@@ -13,6 +13,7 @@ class checkCorrectInput { // 입력이 제대로 됐는지 확인하는 클래�
     var CheckDuplication: checkDuplication
     var CheckThree: checkThree
     var ConvertNumber: convertNumber
+    var CheckNegative: checkNegative
     
     init() {
         self.CheckNumber = checkNumber()
@@ -20,11 +21,12 @@ class checkCorrectInput { // 입력이 제대로 됐는지 확인하는 클래�
         self.CheckDuplication = checkDuplication()
         self.CheckThree = checkThree()
         self.ConvertNumber = convertNumber()
+        self.CheckNegative = checkNegative()
     }
     func check(input: String) -> Bool { // 3글자이면서, 첫번째 자리가 0이 아니고, 중복도 없고, 숫자만 입력 되었을때 true, 아니면 false 반환
         let arr = ConvertNumber.convertArray(input: input)
         
-        return CheckNumber.check(input: input) && CheckZero.check(input: arr) && CheckDuplication.check(input: arr) && CheckThree.check(input: input)
+        return CheckNumber.check(input: input) && CheckZero.check(input: arr) && CheckDuplication.check(input: arr) && CheckThree.check(input: input) && CheckNegative.check(input: input) // 하나라도 false이면 false 반환
     }
     
     func repeatInput() -> String { // 정확한 숫자가 입력될 때까지 반복
