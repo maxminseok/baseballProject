@@ -7,26 +7,28 @@
 
 import Foundation
 
-func start() {
-    var tryCountPerGame: [Int] = []
-    
-    while true {
-        let showMassage = ShowMessage()
-        showMassage.showGreetingMessage()
+class GameStart {
+    func start() {
+        var tryCountPerGame: [Int] = []
         
-        let option = readLine() ?? ""
-        switch option {
-        case "1":
-            let tryCount = PlayGame().playOneGame()
-            tryCountPerGame.append(tryCount)
-        case "2":
-            PlayGame().showGameLog(tryCountPerGame)
-        case "3":
-            print("< 숫자 야구 게임을 종료합니다 >")
-            exit(0)
-        default:
-            print("올바른 숫자를 입력해주세요")
-            print()
+        while true {
+            let showMassage = ShowMessage()
+            showMassage.showGreetingMessage()
+            
+            let option = readLine() ?? ""
+            switch option {
+            case "1":
+                let tryCount = PlayGame().playOneGame()
+                tryCountPerGame.append(tryCount)
+            case "2":
+                PlayGame().showGameLog(tryCountPerGame)
+            case "3":
+                print("< 숫자 야구 게임을 종료합니다 >")
+                exit(0)
+            default:
+                print("올바른 숫자를 입력해주세요")
+                print()
+            }
         }
     }
 }

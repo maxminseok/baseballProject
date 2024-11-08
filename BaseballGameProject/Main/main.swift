@@ -6,7 +6,8 @@
 //
 import Foundation
 
-start()
+let start = GameStart()
+start.start()
 
 
 /*

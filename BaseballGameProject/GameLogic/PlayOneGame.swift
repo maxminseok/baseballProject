@@ -12,7 +12,7 @@ class PlayGame {
         let makeAnswer = MakeAnswer()
         let answer = makeAnswer.makeAnswer() // 정답 생성
         
-        var tryCount = 0
+        var tryCount = 0 // 시도 횟수를 카운트 할 변수
         print("< 게임을 시작합니다 >")
         
         while true {
