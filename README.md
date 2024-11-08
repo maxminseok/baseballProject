@@ -32,25 +32,18 @@
 ## 2. 파일 설명
 ### Main 폴더
 
-main.swift가 있는 폴더입니다. 출력과 게임 진행에 대한 코드가 구현 되어 있습니다.
+main.swift가 있는 폴더입니다. 게임을 시작하는 코드가 작성되어 있습니다.
 
 ### GameLogic 폴더
-게임의 핵심 기능인 스트라이크와 볼 판정에 대한 클래스, 정답을 생성하는 클래스가 구현되어 있는 swift 파일들이 있는 폴더입니다.
+게임 진행을 위한 여러 클래스가 구현되어 있는 swift 파일들이 있는 폴더입니다.
 + StrikeAndBall.swift : 스트라이크와 볼을 판정하는 클래스가 구현되어 있습니다.
-+ MakeAnswer.swift : 정답을 생성하고, 재생성하는 클래스가 구현되어 있습니다.
++ MakeAnswer.swift : 정답을 생성하는 클래스가 구현되어 있습니다.
++ PlayGame.swift : 게임을 진행하고 기록을 확인하는 클래스가 구현되어 있습니다.
++ ShowMessage.swift : 게임 진행 시 나오는 문구들을 모아놓은 클래스 입니다.
++ Start.swift : 게임 시작 시 어떤 것을 실행할지 묻는 클래스가 구현되어 있습니다.
 
 ### Checks 폴더
-생성된 정답이나 입력한 입력 값이 형식에 맞는지 확인하는 각종 check 클래스가 구현되어 있는 swift 파일들이 있는 폴더입니다.
-
-+   CheckDuplication.swift : 중복이 있는지 확인하는 클래스가 구현되어 있습니다.
-+   CheckNumber.swift : 숫자가 맞는지 확인하는 클래스가 구현되어 있습니다.
-+   CheckThree.swift : 3글자가 입력된 것이 맞는지 확인하는 클래스가 구현되어 있습니다.
-+   CheckZero.swift : 첫글자에 0이 입력 되었는지 확인하는 클래스가 구현되어 있습니다.
-+   CheckNegative.swift : 음수가 입력 되었는지 확인하는 클래스가 구현되어 있습니다.
-+   CheckCorrectInput.swift : 위 내용들을 종합해 입력이 형식에 어긋난 게 있는지 확인하는 클래스가 구현되어 있습니다.
-
-### ConverNumber 폴더
-정답과 입력 값을 한 글자씩 나눠 배열에 저장하는 클래스가 구현된 ConvertNumber.swift 파일이 있는 폴더입니다. 
+생성된 정답이나 입력한 입력 값이 형식에 맞는지 확인하는 CheckCorrectInput.swift가 구현되어 있는 폴더입니다.
 
 ---
 
