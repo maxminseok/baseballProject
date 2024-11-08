@@ -28,11 +28,6 @@
 			path = Checks;
 			sourceTree = "<group>";
 		};
-		234EC2372CDDCE880063107C /* ConvertNumber */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ConvertNumber;
-			sourceTree = "<group>";
-		};
 		234EC23B2CDDCE8F0063107C /* GameLogic */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GameLogic;
@@ -61,7 +56,6 @@
 			children = (
 				234EC23F2CDDCE910063107C /* Main */,
 				234EC23B2CDDCE8F0063107C /* GameLogic */,
-				234EC2372CDDCE880063107C /* ConvertNumber */,
 				234EC22F2CDDCE800063107C /* Checks */,
 				23CF85ED2CD86C3D00A4E3C6 /* Products */,
 			);
@@ -92,7 +86,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				234EC22F2CDDCE800063107C /* Checks */,
-				234EC2372CDDCE880063107C /* ConvertNumber */,
 				234EC23B2CDDCE8F0063107C /* GameLogic */,
 				234EC23F2CDDCE910063107C /* Main */,
 			);
