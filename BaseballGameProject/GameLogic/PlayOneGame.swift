@@ -21,11 +21,16 @@ class PlayGame {
             tryCount += 1 // 입력하면 시도 횟수 +1
             
             let inputArray = input.map { $0 }
+            let inputStringArray = input.map { String($0) }
             
-            guard inputArray[0] != "-" else { // 음수 입력 처리
+            let checkNegative = CheckCorrectInput().validateNegative(inputArray)
+            let checkDuplicate = CheckCorrectInput().validateDuplicate(inputStringArray)
+            
+            guard checkNegative && checkDuplicate else { // 음수와 중복 입력 처리
                 print("올바르지 않은 입력값 입니다\n")
                 continue
             }
+            
             let numberArray = input.compactMap { Int(String($0)) }// 숫자만 남기기
             
             let isValidate = CheckCorrectInput().validateInput(numberArray)
