@@ -15,7 +15,7 @@ class MakeAnswer {
         if shuffledArray[0] == 0 { // 첫번째에 0이 오도록 섞였을 때 동작
             return [Int](shuffledArray[1...3])
         } else {    // 첫번째가 0이 아닐 때 동작
-            return [Int](shuffledArray[0...3])
+            return [Int](shuffledArray[0...2])
         }
     }
 }

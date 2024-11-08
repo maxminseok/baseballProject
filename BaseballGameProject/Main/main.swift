@@ -6,7 +6,48 @@
 //
 import Foundation
 
-/*                  출력 구현 부                  */
+func showGreetingMessage() {
+    let greetingMessage = """
+    환영합니다! 원하시는 번호를 입력해주세요
+    1. 게임 시작하기  2. 게임 기록 보기  3. 종료하기
+    """
+    print(greetingMessage)
+}
+
+func playOneGame() -> Int {
+    let answer = MakeAnswer().makeAnswer()
+    
+    var tryCount = 0
+    print("< 게임을 시작합니다 >")
+    
+    while true {
+        print("숫자를 입력하세요")
+        let input = readLine() ?? "" // 기본값 주기 생각 못했다
+        tryCount += 1
+        
+        let numberArray = input.compactMap { Int(String($0)) }.filter { $0 > 0 } // 0보다 큰 정수만 남기기
+        
+        let isValidate = CheckCorrectInput().validateInput(numberArray)
+        guard isValidate else {
+            print("올바르지 않은 입력값 입니다\n")
+            continue // 이번 반복 종료, 다시 처음으로 돌아가 입력 받기
+        }
+        
+        let strikeAndBall = StrikeAndBall().strikeAndBallCount(answer, numberArray) // 스트라이크와 볼 반환 받기
+        
+        if strikeAndBall.strike == 0 && strikeAndBall.ball == 0 {
+            print("Nothing")
+        } else if strikeAndBall.strike == 3 {
+            print("정답입니다!")
+            return tryCount// 정답일 경우 시도횟수 반환
+        } else {
+            print("\(strikeAndBall.strike)스트라이크 \(strikeAndBall.ball)볼")
+        }
+    }
+    
+}
+
+/*
 print("환영합니다! 원하시는 번호를 입력해주세요")
 print("1. 게임 시작하기  2. 게임 기록 보기  3. 종료하기")
 
@@ -91,3 +132,4 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1 or 2일 경우 아래 
 }
 
 print("숫자 야구 게임을 종료합니다")
+*/
