@@ -10,10 +10,11 @@ import Foundation
 class GameStart {
     func start() {
         var tryCountPerGame: [Int] = []
+        var proceed = true
         
-        while true {
+        while proceed {
             let showMassage = ShowMessage()
-            showMassage.showGreetingMessage()
+            showMassage.showGreetingMessage() // 첫 문구 출력
             
             let option = readLine() ?? ""
             switch option {
@@ -24,7 +25,7 @@ class GameStart {
                 PlayGame().showGameLog(tryCountPerGame)
             case "3":
                 print("< 숫자 야구 게임을 종료합니다 >")
-                exit(0)
+                proceed = false
             default:
                 print("올바른 숫자를 입력해주세요")
                 print()

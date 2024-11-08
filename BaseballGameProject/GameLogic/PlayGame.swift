@@ -1,5 +1,5 @@
 //
-//  PlayOneGame.swift
+//  PlayGame.swift
 //  BaseballGameProject
 //
 //  Created by t2023-m0072 on 11/8/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 class PlayGame {
-    func playOneGame() -> Int {
+    func playOneGame() -> Int { // 정답일 떄 시도 횟수 반환
         let answer = MakeAnswer().makeAnswer() // 정답 생성
         
         var tryCount = 0 // 시도 횟수를 카운트 할 변수
@@ -19,20 +19,20 @@ class PlayGame {
             let input = readLine() ?? ""
             tryCount += 1 // 입력하면 시도 횟수 +1
             
-            let inputArray = input.map { String($0) }
+            let inputArray = input.map { String($0) } // 입력을 String타입으로 변환해서 한글자씩 배열에 저장
             
-            let checkNegative = CheckCorrectInput().validateNegative(inputArray)
-            let checkDuplicate = CheckCorrectInput().validateDuplicate(inputArray)
+            let checkNegative = CheckCorrectInput().validateNegative(inputArray) // 음수인지 체크
+            let checkDuplicate = CheckCorrectInput().validateDuplicate(inputArray) // 중복값 있는지 체크
             
             guard checkNegative && checkDuplicate else { // 음수와 중복 입력 처리
                 print("올바르지 않은 입력값 입니다\n")
                 continue
             }
             
-            let numberArray = input.compactMap { Int(String($0)) }// 숫자만 남기기
+            let numberArray = input.compactMap { Int(String($0)) }// 음수와 중복이 없다면 입력에서 숫자만 남기기
             
-            let isValidate = CheckCorrectInput().validateInput(numberArray)
-            guard isValidate else {
+            let checkZeroAndThree = CheckCorrectInput().validateInput(numberArray) // 숫자만 남긴 배열이 3글자이고 첫자리에 0이 있는지 체크
+            guard checkZeroAndThree else {
                 print("올바르지 않은 입력값 입니다\n")
                 continue // 이번 반복 종료, 다시 처음으로 돌아가 입력 받기
             }
