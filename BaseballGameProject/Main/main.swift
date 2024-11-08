@@ -15,7 +15,7 @@ var gameCount: [Int] = [] // 게임 카운트, index번째 게임의 시도횟�
 
 while gameSelect != "1" && gameSelect != "2" && gameSelect != "3" { // 입력이 1,2,3 아닐 경우 메세지 출력
     print ("1~3 사이의 숫자를 입력해주세요")
-    gameSelect = readLine()!
+    gameSelect = readLine() ?? ""
 }
 
 while gameSelect != "3" { // 3일 경우 게임 종료, 1 or 2일 경우 아래 코드 동작
@@ -30,7 +30,7 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1 or 2일 경우 아래 
         let StrikeAndBall = strikeAndBall() // 스트라이크를 체크할 인스턴스
         let CheckCorrectInput = checkCorrectInput() // 입력이 맞게 되었는지 확인할 인스턴스
 
-        var inputNumber = readLine()!
+        var inputNumber = readLine() ?? ""
         
         while !CheckCorrectInput.check(input: inputNumber) { // 입력에 이상 없는지 체크(3글자인지, 첫글자가 0 인지, 중복 있는지, 숫자 외 문자가 있는지)
             inputNumber = CheckCorrectInput.repeatInput() // 이상 있으면 없을 때까지 재입력
@@ -63,7 +63,7 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1 or 2일 경우 아래 
         print("정답입니다!")
         print("\n원하시는 번호를 입력해주세요")
         print("1. 게임 재시작하기  2. 게임 기록 보기  3. 종료하기")
-        gameSelect = readLine()!
+        gameSelect = readLine() ?? ""
     }
     
     // 게임 기록이 있을 때 기록 확인 시 동작
@@ -73,20 +73,20 @@ while gameSelect != "3" { // 3일 경우 게임 종료, 1 or 2일 경우 아래 
         }
         print("\n원하시는 번호를 입력해주세요")
         print("1. 게임 재시작하기  2. 게임 기록 보기  3. 종료하기")
-        gameSelect = readLine()!
+        gameSelect = readLine() ?? ""
     }
     
     // 게임 기록이 없을 때 기록 확인 시 동작
     else if gameSelect == "2" && gameCount.isEmpty { // 2번 눌렀는데 게임 기록이 없을 때 동작
         print("아직 게임 기록이 없습니다")
         print("1. 게임 재시작하기  또는  3. 종료하기 를 입력해주세요")
-        gameSelect = readLine()!
+        gameSelect = readLine() ?? ""
     }
     
     // 정답 맞춘 후 or 기록 확인 후 선택지 출력
     else if gameSelect != "1" && gameSelect != "2" && gameSelect != "3" { // 게임 기록 없을 때 1,2,3 이외의 입력이 들어올 때 동작
         print ("1~3 사이의 숫자를 입력해주세요")
-        gameSelect = readLine()!
+        gameSelect = readLine() ?? ""
     }
 }
 

@@ -23,22 +23,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		23CD71472CDA053300BB2FCB /* Checks */ = {
+		234EC22F2CDDCE800063107C /* Checks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Checks;
 			sourceTree = "<group>";
 		};
-		23CD714E2CDA056300BB2FCB /* GameLogic */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GameLogic;
-			sourceTree = "<group>";
-		};
-		23CD714F2CDA057F00BB2FCB /* ConvertNumber */ = {
+		234EC2372CDDCE880063107C /* ConvertNumber */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ConvertNumber;
 			sourceTree = "<group>";
 		};
-		23CF85EE2CD86C3D00A4E3C6 /* Main */ = {
+		234EC23B2CDDCE8F0063107C /* GameLogic */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GameLogic;
+			sourceTree = "<group>";
+		};
+		234EC23F2CDDCE910063107C /* Main */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Main;
 			sourceTree = "<group>";
@@ -59,10 +59,10 @@
 		23CF85E32CD86C3D00A4E3C6 = {
 			isa = PBXGroup;
 			children = (
-				23CD714F2CDA057F00BB2FCB /* ConvertNumber */,
-				23CD714E2CDA056300BB2FCB /* GameLogic */,
-				23CD71472CDA053300BB2FCB /* Checks */,
-				23CF85EE2CD86C3D00A4E3C6 /* Main */,
+				234EC23F2CDDCE910063107C /* Main */,
+				234EC23B2CDDCE8F0063107C /* GameLogic */,
+				234EC2372CDDCE880063107C /* ConvertNumber */,
+				234EC22F2CDDCE800063107C /* Checks */,
 				23CF85ED2CD86C3D00A4E3C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,10 +91,10 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				23CD71472CDA053300BB2FCB /* Checks */,
-				23CD714E2CDA056300BB2FCB /* GameLogic */,
-				23CD714F2CDA057F00BB2FCB /* ConvertNumber */,
-				23CF85EE2CD86C3D00A4E3C6 /* Main */,
+				234EC22F2CDDCE800063107C /* Checks */,
+				234EC2372CDDCE880063107C /* ConvertNumber */,
+				234EC23B2CDDCE8F0063107C /* GameLogic */,
+				234EC23F2CDDCE910063107C /* Main */,
 			);
 			name = BaseballGameProject;
 			packageProductDependencies = (
