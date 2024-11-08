@@ -7,6 +7,15 @@
 
 import Foundation
 
+class CheckCorrectInput {
+    
+    func validateInput(_ input: [Int]) -> Bool {
+        return input[0] != 0 && input.count == 3 // 입력이 3글자이고, 첫번째 글자가 0이 아닐때 true, 아니면 false 반환
+    }
+}
+
+
+/*
 class checkCorrectInput { // 입력이 제대로 됐는지 확인하는 클래스
     var CheckNumber: checkNumber
     var CheckZero: checkZero
@@ -39,3 +48,4 @@ class checkCorrectInput { // 입력이 제대로 됐는지 확인하는 클래�
         return inputNumber
     }
 }
+*/
