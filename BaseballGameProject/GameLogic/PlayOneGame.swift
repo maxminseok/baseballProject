@@ -9,8 +9,7 @@ import Foundation
 
 class PlayGame {
     func playOneGame() -> Int {
-        let makeAnswer = MakeAnswer()
-        let answer = makeAnswer.makeAnswer() // 정답 생성
+        let answer = MakeAnswer().makeAnswer() // 정답 생성
         
         var tryCount = 0 // 시도 횟수를 카운트 할 변수
         print("< 게임을 시작합니다 >")
@@ -20,11 +19,10 @@ class PlayGame {
             let input = readLine() ?? ""
             tryCount += 1 // 입력하면 시도 횟수 +1
             
-            let inputArray = input.map { $0 }
-            let inputStringArray = input.map { String($0) }
+            let inputArray = input.map { String($0) }
             
             let checkNegative = CheckCorrectInput().validateNegative(inputArray)
-            let checkDuplicate = CheckCorrectInput().validateDuplicate(inputStringArray)
+            let checkDuplicate = CheckCorrectInput().validateDuplicate(inputArray)
             
             guard checkNegative && checkDuplicate else { // 음수와 중복 입력 처리
                 print("올바르지 않은 입력값 입니다\n")

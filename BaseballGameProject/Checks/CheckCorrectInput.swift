@@ -13,7 +13,7 @@ class CheckCorrectInput {
         return input[0] != 0 && input.count == 3 // 입력이 3글자이고, 첫번째 글자가 0이 아닐때 true, 아니면 false 반환
     }
     
-    func validateNegative(_ input: [Character]) -> Bool { // 음수 처리
+    func validateNegative(_ input: [String]) -> Bool { // 음수 처리
         return input[0] != "-" // 음수 입력이면 false 반환
     }
     
